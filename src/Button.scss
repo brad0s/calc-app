@@ -1,0 +1,12 @@
+@import "variables";
+
+.Button {
+  font-size: 2rem;
+  padding: 10px;
+  display: inline-grid;
+  border: 2px solid $dark-font-color;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  justify-self: stretch;
+}

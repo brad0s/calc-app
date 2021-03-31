@@ -1,0 +1,174 @@
+@import "variables";
+
+@mixin operator {
+  background-color: $orange;
+}
+@mixin number {
+  background-color: $light-gray-button;
+}
+
+@mixin special {
+  background-color: $gray-button;
+}
+
+
+
+.Calculator {
+  height: 100vh;
+
+  .Buttons {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 17% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    justify-content: stretch;
+    align-content: stretch;
+    height: 100%;
+    justify-items: center;
+    // align-items: center;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        justify-content: flex-end;
+        padding: 10px;
+        width: 100%;
+        background-color: $dark-gray-display;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: 2px solid $dark-font-color;
+      }
+    }
+    
+    .item-{
+      &display{
+        grid-column: span 4;
+        font-size: 2rem;
+        color: #fff;
+      }
+      &0 {
+        grid-column: span 2;
+        border-bottom-left-radius: 10px;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &1 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &2 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &3 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &4 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &5 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &6 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &7 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &8 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &9 {
+        grid-column: span 1;
+        @include number;
+        &:hover {
+          background-color: lighten($light-gray-button, 10%)
+        }
+      }
+      &percent {
+        grid-column: span 1;
+        @include special;
+        &:hover {
+          background-color: lighten($gray-button, 10%)
+        }
+      }
+      &add {
+        grid-column: span 1;
+        @include operator;
+        &:hover {
+          background-color: lighten($orange, 10%)
+        }
+      }
+      &minus {
+        grid-column: span 1;
+        @include operator;
+        &:hover {
+          background-color: lighten($orange, 10%)
+        }
+      }
+      &multiply {
+        grid-column: span 1;
+        @include operator;
+        &:hover {
+          background-color: lighten($orange, 10%)
+        }
+      }
+      &divide {
+        grid-column: span 1;
+        @include operator;
+        &:hover {
+          background-color: lighten($orange, 10%)
+        }
+      }
+      &C{
+        grid-column: span 2;
+        @include special;
+        &:hover {
+          background-color: lighten($gray-button, 10%)
+        }
+      }
+      &equals {
+        grid-column: span 2;
+        border-bottom-right-radius: 10px;
+        @include operator;
+        &:hover {
+          background-color: lighten($orange, 10%)
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "variables";
+
+.App {
+  margin: 0px 0px;
+  height: 100vh;
+  @media (min-width: $small-screen-min) {
+    width: 400px;
+    margin: auto;
+  }
+}
